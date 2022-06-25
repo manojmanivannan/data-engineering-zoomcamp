@@ -6,6 +6,10 @@ variable "project" {
   description = "Your GCP Project ID"
 }
 
+variable "credentials" {
+  default = "../../../../ninth-palace-354211-8f286b403221.json"
+}
+
 variable "region" {
   description = "Region for GCP resources. Choose as per your location: https://cloud.google.com/about/locations"
   default = "europe-west6"

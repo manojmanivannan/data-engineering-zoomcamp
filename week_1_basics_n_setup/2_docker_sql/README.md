@@ -34,13 +34,7 @@ docker run -it \
 If you have the following error:
 
 ```
-docker run -it \
-  -e POSTGRES_USER="root" \
-  -e POSTGRES_PASSWORD="root" \
-  -e POSTGRES_DB="ny_taxi" \
-  -v e:/zoomcamp/data_engineer/week_1_fundamentals/2_docker_sql/ny_taxi_postgres_data:/var/lib/postgresql/data  \
-  -p 5432:5432 \
-  postgres:13
+docker run -it -e POSTGRES_USER="root" -e POSTGRES_PASSWORD="root" -e POSTGRES_DB="ny_taxi" -v C:/Users/manoj/Documents/MANOJ/Github/data-engineering-zoomcamp/week_1_basics_n_setup/2_docker_sql/ny_taxi_postgres_data:/var/lib/postgresql/data  -p 5432:5432 postgres:13
 
 docker: Error response from daemon: invalid mode: \Program Files\Git\var\lib\postgresql\data.
 See 'docker run --help'.
@@ -168,7 +162,7 @@ docker run -it \
 Running locally
 
 ```bash
-URL="https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.csv"
+URL="https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2021-01.parquet"
 
 python ingest_data.py \
   --user=root \

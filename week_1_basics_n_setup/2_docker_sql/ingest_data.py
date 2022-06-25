@@ -18,7 +18,7 @@ def main(params):
     url = params.url
     filename = 'output.parquet'
     
-    os.system(f"wget {url} -O {filename}")
+    os.system(f"wget --no-check-certificate --no-proxy {url} -O {filename}")
 
     engine = create_engine(f'postgresql://{user}:{password}@{host}:{port}/{db}')
     
